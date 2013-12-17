@@ -52,7 +52,7 @@ done
 $DRUSH $DEST sql-dump > "$DATE-local.sql" 
 echo "Local backup saved to $DATE-local.sql"
 $DRUSH $SOURCE sql-dump > "$DATE-remote.sql"
-echo "Remote backup saved to $DATE-local.sql"
+echo "Remote backup saved to $DATE-remote.sql"
 $DRUSH $DEST sql-drop -y
 $DRUSH $DEST sqlc < "$DATE-remote.sql"
 $DRUSH $DEST rr
